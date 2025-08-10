@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "cd ../frontend && npm install && npm run build"
+    "build": "cd ../lead-crm && npm install && npm run build"
   },
   "engines": {
     "node": "20.x"
