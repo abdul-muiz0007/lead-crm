@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm --prefix ../lead-crm install && npm --prefix ../lead-crm run dev",
     "start": "node index.js"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "keywords": [],
   "author": "",

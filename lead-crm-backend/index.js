@@ -20,5 +20,11 @@ app.use("/api/leads", leadRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
+app.use(express.static(path.join(__dirname, "../lead-crm/dist"))); // adjust if frontend folder name changes
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../lead-crm/dist/index.html"));
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
