@@ -13,10 +13,3 @@ exports.verifyToken = (req, res, next) => {
     res.status(403).json({ message: "Invalid token" });
   }
 };
-
-exports.requireAdmin = (req, res, next) => {
-  if (req.user.role !== "admin") {
-    return res.status(403).json({ message: "Admin access only" });
-  }
-  next();
-};
